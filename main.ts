@@ -38,7 +38,10 @@ points = 0
 landscape = []
 ALT = 0
 for (let index = 0; index < 100; index++) {
-    landscape.unshift(randint(-3, 3))
+    landscape.unshift(randint(0, 3))
+    if (80 < randint(0, 100)) {
+        landscape[0] = landscape[0] * -1
+    }
 }
 pause2 = 0
 basic.forever(function () {
@@ -70,7 +73,11 @@ basic.forever(function () {
             }
         }
         shifted = landscape.shift()
-        landscape.push(randint(-3, 3))
+        if (80 < randint(0, 100)) {
+            landscape.push(randint(-3, 0))
+        } else {
+            landscape.push(randint(0, 3))
+        }
         if (lives <= 0) {
             game.setScore(points)
             basic.showIcon(IconNames.Sad)
