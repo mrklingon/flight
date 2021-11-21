@@ -9,6 +9,7 @@ input.onButtonPressed(Button.AB, function () {
         led.plot(zap, ALT)
         landscape[zap] = ALT - 1
     }
+    music.playTone(988, music.beat(BeatFraction.Eighth))
 })
 input.onButtonPressed(Button.B, function () {
     ALT += 1
@@ -40,7 +41,6 @@ images.createBigImage(`
     . . . # . . . . . .
     . . . . # . . . . .
     `).scrollImage(1, 200)
-basic.showString("Flight!")
 lives = 5
 points = 0
 landscape = []
