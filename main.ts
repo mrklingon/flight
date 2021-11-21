@@ -7,6 +7,7 @@ input.onButtonPressed(Button.A, function () {
 input.onButtonPressed(Button.AB, function () {
     for (let zap = 0; zap <= 4; zap++) {
         led.plot(zap, ALT)
+        landscape[zap] = 0
     }
 })
 input.onButtonPressed(Button.B, function () {
@@ -18,9 +19,10 @@ input.onButtonPressed(Button.B, function () {
 let shifted = 0
 let height = 0
 let ALT = 0
+let landscape: number[] = []
 let lives = 5
 let points = 0
-let landscape: number[] = []
+landscape = []
 ALT = 0
 for (let index = 0; index < 100; index++) {
     landscape.unshift(randint(0, 3))
