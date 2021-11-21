@@ -33,6 +33,14 @@ let ALT = 0
 let landscape: number[] = []
 let points = 0
 let lives = 0
+images.createBigImage(`
+    . . . . # . . . . .
+    . . . # . . . . . .
+    . # # # # # # . . .
+    . . . # . . . . . .
+    . . . . # . . . . .
+    `).scrollImage(1, 200)
+basic.showString("Flight!")
 lives = 5
 points = 0
 landscape = []
